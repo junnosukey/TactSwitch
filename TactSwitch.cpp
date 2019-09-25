@@ -24,6 +24,9 @@ void TactSwitch::processTick(uint32_t tick)
   if (tick - upTick_ < 50)
     return;
 
+  if (tick - downTick_ < 50)
+    return;
+
   switch (downTick_)
   {
   case 0:
